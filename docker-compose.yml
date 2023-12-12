@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  storybook:
+    build:
+      context: .
+      dockerfile: Dockerfile.local
+      network: host
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/workspace
+    tty: true
