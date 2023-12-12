@@ -14,9 +14,4 @@ services:
       - '5173:5173'
     volumes:
       - .:/workspace
-      - node-modules:/workspace/node_modules
-      - pnpm-store:/workspace/.pnpm-store
     tty: true
-volumes:
-  node-modules:
-  pnpm-store:

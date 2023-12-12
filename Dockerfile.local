@@ -4,9 +4,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	git \
 	&& rm -rf /var/lib/apt/lists/*
 
-RUN mkdir /workspace
-WORKDIR /workspace
-
 # user
 ARG UID
 ARG GID
@@ -18,6 +15,9 @@ ENV USERNAME ${USERNAME}
 
 RUN groupmod -n ${USERNAME} node && \
 	usermod -l ${USERNAME} node
+
+RUN mkdir /workspace
+WORKDIR /workspace
 
 RUN npm i -g pnpm
 
