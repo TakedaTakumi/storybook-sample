@@ -1,12 +1,22 @@
 version: "3.9"
 services:
   storybook:
+    user: $UID:$GID
     build:
       context: .
       dockerfile: Dockerfile.local
       network: host
+      args:
+        - UID=$UID
+        - GID=$GID
+        - USERNAME=$USERNAME
     ports:
-      - 3000:3000
+      - '5173:5173'
     volumes:
       - .:/workspace
+      - node-modules:/workspace/node_modules
+      - pnpm-store:/workspace/.pnpm-store
     tty: true
+volumes:
+  node-modules:
+  pnpm-store:

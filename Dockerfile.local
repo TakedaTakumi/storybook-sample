@@ -1,16 +1,30 @@
 FROM node:20
 
-RUN mkdir /workspace
-WORKDIR /workspace
-
 RUN apt-get update && apt-get install -y --no-install-recommends \
 	git \
 	&& rm -rf /var/lib/apt/lists/*
+
+RUN mkdir /workspace
+WORKDIR /workspace
+
+# user
+ARG UID
+ARG GID
+ARG USERNAME
+
+ENV UID ${UID}
+ENV GID ${GID}
+ENV USERNAME ${USERNAME}
+
+RUN groupmod -n ${USERNAME} node && \
+	usermod -l ${USERNAME} node
 
 RUN npm i -g pnpm
 
 COPY . .
 
-# RUN pnpm install
+RUN pnpm install
 
-EXPOSE 3000
+EXPOSE 5173
+
+CMD ["pnpm", "dev", "--host"]
