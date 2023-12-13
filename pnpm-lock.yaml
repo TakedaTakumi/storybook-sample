@@ -16,6 +16,9 @@ devDependencies:
   '@storybook/addon-controls':
     specifier: ^7.6.4
     version: 7.6.4(react-dom@18.2.0)(react@18.2.0)
+  '@storybook/addon-viewport':
+    specifier: ^7.6.4
+    version: 7.6.4
   '@storybook/vue3':
     specifier: ^7.6.4
     version: 7.6.4(@vue/compiler-core@3.3.11)(vue@3.3.11)
@@ -2496,6 +2499,12 @@ packages:
       - react
       - react-dom
       - supports-color
+    dev: true
+
+  /@storybook/addon-viewport@7.6.4:
+    resolution: {integrity: sha512-SoTcHIoqybhYD28v7QExF1EZnl7FfxuP74VDhtze5LyMd2CbqmVnUfwewLCz/3IvCNce0GqdNyg1m6QJ7Eq1uw==}
+    dependencies:
+      memoizerific: 1.11.3
     dev: true
 
   /@storybook/blocks@7.6.4(react-dom@18.2.0)(react@18.2.0):
