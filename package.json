@@ -7,12 +7,14 @@
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
-    "book": "storybook dev --port 6006"
+    "book": "storybook dev --port 6006",
+    "book:clean": "rm -rf node_modules/.cache/storybook"
   },
   "dependencies": {
     "vue": "^3.3.11"
   },
   "devDependencies": {
+    "@storybook/vue3": "^7.6.4",
     "@storybook/vue3-vite": "^7.6.4",
     "@types/node": "^20.10.4",
     "@vitejs/plugin-vue": "^4.5.2",
