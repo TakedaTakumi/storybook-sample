@@ -1,27 +1,17 @@
 FROM node:20
 
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+
+RUN mkdir /workspace
+WORKDIR /workspace
+COPY . .
+
 RUN apt-get update && apt-get install -y --no-install-recommends \
 	git \
 	&& rm -rf /var/lib/apt/lists/*
 
-# user
-ARG UID
-ARG GID
-ARG USERNAME
-
-ENV UID ${UID}
-ENV GID ${GID}
-ENV USERNAME ${USERNAME}
-
-RUN groupmod -n ${USERNAME} node && \
-	usermod -l ${USERNAME} node
-
-RUN mkdir /workspace
-WORKDIR /workspace
-
 RUN npm i -g pnpm
-
-COPY . .
 
 RUN pnpm install
 
