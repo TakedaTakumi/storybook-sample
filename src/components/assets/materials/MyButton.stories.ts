@@ -13,6 +13,25 @@ const meta: Meta<typeof MyButton> = {
     },
     template: "<MyButton v-bind='args' />",
   }),
+  args: {
+    label: "ボタン",
+    variant: "primary",
+    size: "medium",
+  },
+  argTypes: {
+    variant: {
+      control: {
+        type: "inline-radio",
+      },
+      options: ["primary", "secondary"],
+    },
+    size: {
+      control: {
+        type: "select",
+      },
+      options: ["small", "medium", "large"],
+    },
+  },
 };
 
 export const Default: Story = {
