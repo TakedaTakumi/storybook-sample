@@ -13,6 +13,9 @@ devDependencies:
   '@storybook/addon-actions':
     specifier: ^7.6.4
     version: 7.6.4
+  '@storybook/addon-backgrounds':
+    specifier: ^7.6.4
+    version: 7.6.4
   '@storybook/addon-controls':
     specifier: ^7.6.4
     version: 7.6.4(react-dom@18.2.0)(react@18.2.0)
@@ -2484,6 +2487,14 @@ packages:
       dequal: 2.0.3
       polished: 4.2.2
       uuid: 9.0.1
+    dev: true
+
+  /@storybook/addon-backgrounds@7.6.4:
+    resolution: {integrity: sha512-gNy3kIkHSr+Lg/jVDHwbZjIe1po5SDGZNVe39vrJwnqGz8T1clWes9WHCL6zk/uaCDA3yUna2Nt/KlOFAWDSoQ==}
+    dependencies:
+      '@storybook/global': 5.0.0
+      memoizerific: 1.11.3
+      ts-dedent: 2.2.0
     dev: true
 
   /@storybook/addon-controls@7.6.4(react-dom@18.2.0)(react@18.2.0):

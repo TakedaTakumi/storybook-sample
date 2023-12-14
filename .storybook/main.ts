@@ -7,6 +7,7 @@ const config: StorybookConfig = {
 		"@storybook/addon-controls",
 		"@storybook/addon-actions",
 		"@storybook/addon-viewport",
+		"@storybook/addon-backgrounds",
 	],
 };
 
