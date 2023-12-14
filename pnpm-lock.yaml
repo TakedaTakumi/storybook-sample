@@ -19,6 +19,12 @@ devDependencies:
   '@storybook/addon-controls':
     specifier: ^7.6.4
     version: 7.6.4(react-dom@18.2.0)(react@18.2.0)
+  '@storybook/addon-measure':
+    specifier: ^7.6.4
+    version: 7.6.4
+  '@storybook/addon-outline':
+    specifier: ^7.6.4
+    version: 7.6.4
   '@storybook/addon-viewport':
     specifier: ^7.6.4
     version: 7.6.4
@@ -2510,6 +2516,20 @@ packages:
       - react
       - react-dom
       - supports-color
+    dev: true
+
+  /@storybook/addon-measure@7.6.4:
+    resolution: {integrity: sha512-73wsJ8PALsgWniR3MA/cmxcFuU6cRruWdIyYzOMgM8ife2Jm3xSkV7cTTXAqXt2H9Uuki4PGnuMHWWFLpPeyVA==}
+    dependencies:
+      '@storybook/global': 5.0.0
+      tiny-invariant: 1.3.1
+    dev: true
+
+  /@storybook/addon-outline@7.6.4:
+    resolution: {integrity: sha512-CFxGASRse/qeFocetDKFNeWZ3Aa2wapVtRciDNa4Zx7k1wCnTjEsPIm54waOuCaNVcrvO+nJUAZG5WyiorQvcg==}
+    dependencies:
+      '@storybook/global': 5.0.0
+      ts-dedent: 2.2.0
     dev: true
 
   /@storybook/addon-viewport@7.6.4:
