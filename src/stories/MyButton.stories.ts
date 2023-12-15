@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from "@storybook/vue3";
 type Story = StoryObj<typeof MyButton>;
 
 const meta: Meta<typeof MyButton> = {
-  title: "Assets/Material/MyButton",
+  title: "Asset/Material/MyButton",
   component: MyButton,
   render: (args) => ({
     components: { MyButton },

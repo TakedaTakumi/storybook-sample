@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from "@storybook/vue3";
 type Story = StoryObj<typeof MyHeader>;
 
 const meta: Meta<typeof MyHeader> = {
-  title: "Assets/Material/MyHeader",
+  title: "Asset/Material/MyHeader",
   component: MyHeader,
   render: (args) => ({
     components: { MyHeader },
