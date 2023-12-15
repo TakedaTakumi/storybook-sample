@@ -6,6 +6,9 @@
 
 <script setup lang="ts">
 const props = defineProps({
+  /**
+   * ボタンに表示するテキスト
+   */
   label: {
     type: String,
     required: true,
@@ -26,7 +29,12 @@ const props = defineProps({
   },
 });
 
-const emits = defineEmits(["click"]);
+const emits = defineEmits([
+  /**
+   * ボタンがクリックされた
+   */
+  "click",
+]);
 </script>
 
 <style scoped>
