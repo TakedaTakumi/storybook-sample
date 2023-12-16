@@ -15,6 +15,9 @@ RUN npm i -g pnpm
 
 RUN pnpm install
 
+RUN pnpm exec playwright install
+RUN pnpm exec playwright install-deps
+
 EXPOSE 5173
 
 CMD ["pnpm", "dev", "--host"]
