@@ -1,15 +1,10 @@
 version: "3.9"
 services:
   storybook:
-    user: $UID:$GID
     build:
       context: .
       dockerfile: Dockerfile.local
       network: host
-      args:
-        - UID=$UID
-        - GID=$GID
-        - USERNAME=$USERNAME
     ports:
       - "5173:5173"
     volumes:
