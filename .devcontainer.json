@@ -22,7 +22,7 @@
     "vscode": {
       // Set *default* container specific settings.json values on container create.
       "settings": {
-        "cSpell.words": ["devcontainer", "autodocs"],
+        "cSpell.words": ["devcontainer", "autodocs", "pinia"],
         "cSpell.ignorePaths": [
           "vscode-extension",
           ".git/objects",
