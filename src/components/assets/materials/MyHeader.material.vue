@@ -1,13 +1,13 @@
 <template>
   <header>
-    <h1>Storybook 7 + Vue 3 + TypeScript サンプル</h1>
+    <h1>{{$t("header.title")}}</h1>
     <div class="buttons">
       <template v-if="props.isLoggedIn">
-        <MyButton size="small" label="ログアウト" @click="$emit('logout')" />
+        <MyButton size="small" :label="$t('header.logout')" @click="$emit('logout')" />
       </template>
       <template v-else>
-        <MyButton size="small" label="ログイン" @click="$emit('login')" />
-        <MyButton size="small" label="会員登録" @click="$emit('signUp')" />
+        <MyButton size="small" :label="$t('header.login')" @click="$emit('login')" />
+        <MyButton size="small" :label="$t('header.signUp')" @click="$emit('signUp')" />
       </template>
     </div>
   </header>
