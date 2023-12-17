@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import MyPage from "./components/pages/MyPage/MyPage.page.vue";
 </script>
 
 <template>
-  <MyPage />
+  <router-view />
 </template>
 
 <style scoped>
